@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Israr Ahmed - Developer Portfolio</title>
+    <!-- Preconnecting to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Importing fonts from Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&family=Poppins:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Global reset for margin, padding, and box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling for the body */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
+            line-height: 1.6;
+        }
+
+        /* Navigation bar styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #112240;
+        }
+
+        /* Left side of the navbar */
+        nav .left {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #64ffda;
+        }
+
+        /* Navigation list styles */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        /* Navigation list items */
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        /* Navigation links */
+        nav ul li a {
+            text-decoration: none;
+            color: #ccd6f6;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        /* Hover effect for navigation links */
+        nav ul li a:hover {
+            color: #64ffda;
+            font-size: 1rem;
+        }
+
+        /* First section (intro) styling */
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 80px 0;
+            padding: 0 20px;
+        }
+
+        /* Left side of the first section (text) */
+        .firstSection .leftSection {
+            flex: 1;
+            max-width: 500px;
+            font-size: 2rem;
+            line-height: 1.5;
+        }
+
+        /* Right side of the first section (image) */
+        .firstSection .rightSection {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        /* Image styling */
+        .firstSection img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Special text color */
+        .pruple {
+            color: #64ffda;
+            font-weight: bold;
+        }
+
+        /* Element styling for the typed text */
+        #element {
+            color: #b1ffed;
+        }
+
+        /* Section styling */
+        section {
+            padding: 60px 20px;
+        }
+
+        /* Heading styles */
+        h2 {
+            color: #64ffda;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Paragraph styles */
+        p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        /* List styling */
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Label styling for form */
+        label {
+            margin: 10px 0 5px;
+            font-size: 1rem;
+        }
+
+        /* Input and textarea styling */
+        input,
+        textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccd6f6;
+            border-radius: 5px;
+            background-color: #112240;
+            color: #ccd6f6;
+            font-size: 1rem;
+        }
+
+        /* Button styling */
+        button {
+            padding: 10px 20px;
+            background-color: #64ffda;
+            color: #0a192f;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: #0a192f;
+            color: #64ffda;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header section with navigation -->
+    <header>
+        <nav>
+            <div class="left">Israr Ahmed</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- First section: Intro -->
+        <section class="firstSection">
+            <div class="leftSection">
+                <h1>Hello, My name is <span class="pruple">Israr Ahmed,</span></h1>
+                <p>and I am a passionate</p>
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <img src="dp.png" alt="Israr Ahmed Profile Picture">
+            </div>
+        </section>
+        <!-- About section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a highly motivated and dedicated web developer with a strong passion for creating responsive and
+                visually appealing websites. With a solid foundation in HTML, CSS, JavaScript, and Python, I am focused
+                on crafting seamless user experiences through efficient, clean code. My goal is to provide innovative
+                solutions to problems and deliver high-quality work that exceeds expectations. I am also adept at
+                working with frameworks such as Django and Flask, and I thrive in fast-paced, collaborative
+                environments.</p>
+        </section>
+        <!-- Services section -->
+        <!-- Services section -->
+        <section id="services">
+            <h2>Skills & Expertise</h2>
+            <p>I possess a diverse set of technical skills that allow me to build efficient, scalable, and user-friendly
+                applications across various domains.</p>
+            <ul>
+                <li><strong>Core Java:</strong> Proficient in object-oriented programming, developing robust
+                    applications such as airline reservation and school management systems.</li>
+                <li><strong>HTML & CSS:</strong> Skilled in creating visually appealing, responsive web designs,
+                    including e-commerce and anime websites.</li>
+                <li><strong>Python:</strong> Experience in building applications such as hotel management systems,
+                    billing systems, and interactive games like Hangman.</li>
+                <li><strong>Django:</strong> Expertise in developing web applications using Django, ensuring scalability
+                    and security.</li>
+                <li><strong>MySQL:</strong> Strong knowledge of database management, data storage, and retrieval to
+                    support complex applications.</li>
+            </ul>
+        </section>
+
+        <!-- Projects section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <h3>Java:</h3>
+                    <ul>
+                        <li>Airline Reservations System</li>
+                        <li>Quiz Management System</li>
+                        <li>School Management System</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Python:</h3>
+                    <ul>
+                        <li>Hotel Management System</li>
+                        <li>Billing System</li>
+                        <li>Hangman Game</li>
+                        <li>Water Reminder</li>
+                        <li>To-Do List</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>HTML & CSS:</h3>
+                    <ul>
+                        <li>E-Commerce Website Home Page</li>
+                        <li>Anime Website Home Page</li>
+                        <li>Registration Form</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you'd like to collaborate on a project or just want to get in touch, feel free to reach out to me
+                through the contact form below.</p>
+            <form action="submit-form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: [
+                'Web Developer.',
+                'Python Developer.',
+                'Django and Flask Specialist.',
+                'Responsive Websites Creator.'
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
