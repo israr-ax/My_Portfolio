@@ -5,22 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Israr Ahmed - Developer Portfolio</title>
-    <!-- Preconnecting to Google Fonts for faster loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Importing fonts from Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&family=Poppins:wght@100;300;400;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&family=Poppins:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Global reset for margin, padding, and box-sizing */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Styling for the body */
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #0a192f;
@@ -28,7 +22,6 @@
             line-height: 1.6;
         }
 
-        /* Navigation bar styles */
         nav {
             display: flex;
             justify-content: space-between;
@@ -37,25 +30,21 @@
             background-color: #112240;
         }
 
-        /* Left side of the navbar */
         nav .left {
             font-size: 1.8rem;
             font-weight: bold;
             color: #64ffda;
         }
 
-        /* Navigation list styles */
         nav ul {
             display: flex;
             list-style: none;
         }
 
-        /* Navigation list items */
         nav ul li {
             margin-left: 20px;
         }
 
-        /* Navigation links */
         nav ul li a {
             text-decoration: none;
             color: #ccd6f6;
@@ -63,13 +52,33 @@
             transition: 0.3s;
         }
 
-        /* Hover effect for navigation links */
         nav ul li a:hover {
             color: #64ffda;
             font-size: 1rem;
         }
 
-        /* First section (intro) styling */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #ccd6f6;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-active {
+            display: block;
+        }
+
         .firstSection {
             display: flex;
             justify-content: space-around;
@@ -79,7 +88,6 @@
             padding: 0 20px;
         }
 
-        /* Left side of the first section (text) */
         .firstSection .leftSection {
             flex: 1;
             max-width: 500px;
@@ -87,66 +95,56 @@
             line-height: 1.5;
         }
 
-        /* Right side of the first section (image) */
         .firstSection .rightSection {
             flex: 1;
             max-width: 400px;
         }
 
-        /* Image styling */
         .firstSection img {
             width: 100%;
             border-radius: 10px;
+            height: auto;
         }
 
-        /* Special text color */
         .pruple {
             color: #64ffda;
             font-weight: bold;
         }
 
-        /* Element styling for the typed text */
         #element {
             color: #b1ffed;
         }
 
-        /* Section styling */
         section {
             padding: 60px 20px;
         }
 
-        /* Heading styles */
         h2 {
             color: #64ffda;
             font-size: 2.2rem;
             margin-bottom: 20px;
         }
 
-        /* Paragraph styles */
         p {
             font-size: 1rem;
             margin-bottom: 20px;
         }
 
-        /* List styling */
         ul {
             list-style-type: disc;
             margin-left: 20px;
         }
 
-        /* Form styling */
         form {
             display: flex;
             flex-direction: column;
         }
 
-        /* Label styling for form */
         label {
             margin: 10px 0 5px;
             font-size: 1rem;
         }
 
-        /* Input and textarea styling */
         input,
         textarea {
             padding: 10px;
@@ -158,7 +156,6 @@
             font-size: 1rem;
         }
 
-        /* Button styling */
         button {
             padding: 10px 20px;
             background-color: #64ffda;
@@ -170,20 +167,61 @@
             transition: background-color 0.3s;
         }
 
-        /* Button hover effect */
         button:hover {
             background-color: #0a192f;
             color: #64ffda;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                padding: 10px 0;
+                display: none; /* Hide the menu by default */
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .hamburger {
+                display: flex; /* Show hamburger icon */
+            }
+
+            .firstSection {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .firstSection .leftSection,
+            .firstSection .rightSection {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .firstSection img {
+                max-width: 90%;
+            }
         }
     </style>
 </head>
 
 <body>
-    <!-- Header section with navigation -->
     <header>
         <nav>
             <div class="left">Israr Ahmed</div>
-            <ul>
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
@@ -194,7 +232,6 @@
     </header>
 
     <main>
-        <!-- First section: Intro -->
         <section class="firstSection">
             <div class="leftSection">
                 <h1>Hello, My name is <span class="pruple">Israr Ahmed,</span></h1>
@@ -205,37 +242,22 @@
                 <img src="dp.png" alt="Israr Ahmed Profile Picture">
             </div>
         </section>
-        <!-- About section -->
         <section id="about">
             <h2>About Me</h2>
-            <p>I am a highly motivated and dedicated web developer with a strong passion for creating responsive and
-                visually appealing websites. With a solid foundation in HTML, CSS, JavaScript, and Python, I am focused
-                on crafting seamless user experiences through efficient, clean code. My goal is to provide innovative
-                solutions to problems and deliver high-quality work that exceeds expectations. I am also adept at
-                working with frameworks such as Django and Flask, and I thrive in fast-paced, collaborative
-                environments.</p>
+            <p>I am a highly motivated and dedicated web developer with a strong passion for creating responsive and visually appealing websites. With a solid foundation in HTML, CSS, JavaScript, and Python, I am focused on crafting seamless user experiences through efficient, clean code. My goal is to provide innovative solutions to problems and deliver high-quality work that exceeds expectations. I am also adept at working with frameworks such as Django and Flask, and I thrive in fast-paced, collaborative environments.</p>
         </section>
-        <!-- Services section -->
-        <!-- Services section -->
         <section id="services">
             <h2>Skills & Expertise</h2>
-            <p>I possess a diverse set of technical skills that allow me to build efficient, scalable, and user-friendly
-                applications across various domains.</p>
+            <p>I possess a diverse set of technical skills that allow me to build efficient, scalable, and user-friendly applications across various domains.</p>
             <ul>
-                <li><strong>Core Java:</strong> Proficient in object-oriented programming, developing robust
-                    applications such as airline reservation and school management systems.</li>
-                <li><strong>HTML & CSS:</strong> Skilled in creating visually appealing, responsive web designs,
-                    including e-commerce and anime websites.</li>
-                <li><strong>Python:</strong> Experience in building applications such as hotel management systems,
-                    billing systems, and interactive games like Hangman.</li>
-                <li><strong>Django:</strong> Expertise in developing web applications using Django, ensuring scalability
-                    and security.</li>
-                <li><strong>MySQL:</strong> Strong knowledge of database management, data storage, and retrieval to
-                    support complex applications.</li>
+                <li><strong>Core Java:</strong> Proficient in object-oriented programming, developing robust applications such as airline reservation and school management systems.</li>
+                <li><strong>HTML & CSS:</strong> Skilled in creating visually appealing, responsive web designs, including e-commerce and anime websites.</li>
+                <li><strong>Python:</strong> Experience in building applications such as hotel management systems, billing systems, and interactive games like Hangman.</li>
+                <li><strong>Django:</strong> Expertise in developing web applications using Django, ensuring scalability and security.</li>
+                <li><strong>MySQL:</strong> Strong knowledge of database management, data storage, and retrieval to support complex applications.</li>
             </ul>
         </section>
 
-        <!-- Projects section -->
         <section id="projects">
             <h2>Projects</h2>
             <ul>
@@ -270,8 +292,7 @@
 
         <section id="contact">
             <h2>Contact Me</h2>
-            <p>If you'd like to collaborate on a project or just want to get in touch, feel free to reach out to me
-                through the contact form below.</p>
+            <p>If you'd like to collaborate on a project or just want to get in touch, feel free to reach out to me through the contact form below.</p>
             <form action="submit-form.php" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -296,6 +317,14 @@
             typeSpeed: 50,
             backSpeed: 30,
             loop: true
+        });
+
+        // JavaScript for hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
         });
     </script>
 </body>
